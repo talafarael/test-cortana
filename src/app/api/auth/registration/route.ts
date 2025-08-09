@@ -30,12 +30,13 @@ export async function POST(request: Request) {
 
   const response = NextResponse.json({ message: true }, { status: 201 });
 
-  response.cookies.set('token', token, {
+
+  response.cookies.set("token", token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: true,
     maxAge: 60 * 60 * 24 * 7,
-    path: '/',
-    sameSite: 'none',
+    path: "/",
+    sameSite: "none",
   });
 
   return response;
