@@ -14,11 +14,11 @@ export function PrivateRoute({ children }: { children: React.ReactNode }) {
     } else {
       setInitialized(true);
     }
-  }, [user, loading, getUser]);
+  }, []);
 
   useEffect(() => {
     if (error) router.replace("/");
-    if (initialized && !loading && !user) {
+    if (!loading && !user) {
       router.replace("/");
     }
   }, [initialized, loading, user, router]);
