@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import { Button } from "@/shared/components/ui/button"
 import { useUserStore } from '@/entity/user';
+import { ChangeLanguageButton } from '@/entity/language';
 
 export const Header = () => {
   const { getUser } = useUserStore()
@@ -12,9 +13,12 @@ export const Header = () => {
   return (
     <header className="h-[65px] flex w-[100vw] p-[20px] justify-between items-center bg-[#3333]">
       UserAvatar
-      <Button onClick={() => { }} className="flex items-center gap-2">
-        Login
-      </Button>
+      <div>
+        <Button onClick={() => { }} className="flex items-center gap-2">
+          Login
+        </Button>
+        <ChangeLanguageButton />
+      </div>
     </header>
   )
 }

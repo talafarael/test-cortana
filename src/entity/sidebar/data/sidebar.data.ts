@@ -1,10 +1,16 @@
+import { Home, User } from 'lucide-react'
+
 export const sideBarData = [
   {
-    link: "",
-    title: "Product",
+    link: "dashboard",
+    title: "Dashboard",
+    titleUa: "Товари",
+    icon: Home
   },
   {
-    link: "profile",
+    link: "dashboard/profile",
+    titleUa: "Профіль",
     title: "Profile",
-  },
+    icon: User
+  }
 ]
