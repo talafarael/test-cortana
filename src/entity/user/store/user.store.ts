@@ -10,6 +10,7 @@ export interface IUserStore {
   error: string | undefined;
   loading: boolean;
   getUser: () => Promise<void>;
+  removeUser: () => void
 }
 
 const localMiddlewares = (f: StateCreator<IUserStore>) =>
@@ -39,5 +40,6 @@ export const useUserStore = create<IUserStore>()(
         set({ loading: false, user: undefined, error: errMessagehandlerError });
       }
     },
+    removeUser: () => set({ user: undefined }),
   })),
 );

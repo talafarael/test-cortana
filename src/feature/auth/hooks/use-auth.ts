@@ -20,8 +20,7 @@ export const useAuth = () => {
         await registrationApi(data as RegisterValidType)
       }
       await getUser()
-      console.log(user)
-      router.push("/main");
+      router.push("/dashboard");
     } catch (e: any) {
       const errMessagehandlerError = handlerError(e);
       setError(errMessagehandlerError)

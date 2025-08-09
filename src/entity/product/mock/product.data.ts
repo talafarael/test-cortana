@@ -76,5 +76,4 @@ export const prodcutsMockData = [
     },
     "price": 3500
   }
-
 ]

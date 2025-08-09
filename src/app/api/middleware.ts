@@ -11,7 +11,6 @@ export async function middleware(request: NextRequest) {
 
   try {
     const decoded = await verifyToken(token)
-
     const response = NextResponse.next();
 
     response.headers.set('x-user-id', decoded.id as any);
@@ -21,5 +20,6 @@ export async function middleware(request: NextRequest) {
   }
 }
 export const config = {
-  matcher: ['/user*'],
+  matcher: ['/user*', '/api/product*'],
 }
+

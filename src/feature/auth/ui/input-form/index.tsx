@@ -20,7 +20,6 @@ export const InputFormAuth = ({ type }: InputFormAtuhProps) => {
   const AuthSchema = (type == "login" ? InputFormLoginSchema : InputFormRegistrationSchema) as IInputField<z.infer<typeof AuthResolver>>[]
   const {
     handlerAuth,
-    loading,
     error
   } = useAuth()
   const form = useForm<RegisterValidType | LoginValidType>({

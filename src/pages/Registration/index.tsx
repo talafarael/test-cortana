@@ -3,25 +3,25 @@ import { useLanguageStore } from '@/entity/language'
 import { InputFormAuth } from '@/feature/auth/ui/input-form'
 import { Card, CardHeader } from '@/shared/components/ui/card'
 import React from 'react'
-
-export const LoginAuth = () => {
+export const Registration = () => {
   const { language } = useLanguageStore()
   return (
     <div className='h-[80vh] flex justify-center items-center'>
       <Card className='h-[350px] w-[350px] flex justify-center items-center'>
         <CardHeader className='text-start w-[80%]'>
-          {textLogin.title[language]}
+          {textRegister.title[language]}
         </CardHeader>
         <InputFormAuth
-          type='login'
+          type='registration'
         />
       </Card>
     </div>
   )
+
 }
-const textLogin = {
+const textRegister = {
   title: {
-    eng: "login",
-    ua: "Вхід"
+    eng: "register",
+    ua: "Реєстрація"
   }
 }

@@ -3,7 +3,6 @@ import { handlerError } from "@/shared";
 import { useEffect, useState } from "react";
 import { GetProductsApi } from "../api";
 import { ProductModel } from "../model";
-import { Products } from "@/pages/product";
 
 export const useGetProducts = () => {
   const [loading, setLoading] = useState<boolean>(false)

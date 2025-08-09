@@ -11,7 +11,7 @@ export const ProductsList = () => {
   } = useGetProducts()
   return (
     <div>
-      {products.map((elem) => <ProductCard product={elem} />)}
+      {products.map((elem) => <ProductCard key={elem._id} product={elem} />)}
     </div>
   )
 }

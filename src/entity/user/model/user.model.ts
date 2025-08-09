@@ -1,4 +1,3 @@
-'use server'
 import mongoose, { Schema, model, Document, Model, Types } from 'mongoose';
 
 export interface IUser extends Document {
