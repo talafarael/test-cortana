@@ -1,4 +1,4 @@
-import { Products } from "@/pages/product";
+import Products from "@/pages/product";
 
 export default function Home() {
   return (

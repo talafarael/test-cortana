@@ -1,7 +1,7 @@
 import { ProductsList } from '@/entity/product/ui'
 import React from 'react'
 
-export const Products = () => {
+export default function Products() {
   return (
     <ProductsList />
   )

@@ -4,7 +4,7 @@ import { InputFormAuth } from '@/feature/auth/ui/input-form'
 import { Card, CardHeader } from '@/shared/components/ui/card'
 import React from 'react'
 
-export const LoginAuth = () => {
+export default function LoginAuth() {
   const { language } = useLanguageStore()
   return (
     <div className='h-[80vh] flex justify-center items-center'>

@@ -1,7 +1,7 @@
 import { UserProfile } from '@/entity/user'
 import React from 'react'
 
-export const Profile = () => {
+export default function Profile() {
   return (
     <UserProfile />
   )

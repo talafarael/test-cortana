@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react'
 
 
-export const Main = () => {
+export default function Main() {
   const router = useRouter()
   const { language } = useLanguageStore()
   const { user } = useUserStore()
