@@ -2,20 +2,18 @@ import axios, { AxiosResponse } from "axios";
 const API_PORT = `api/`;
 
 export const createApi = () => {
-  const token = localStorage.getItem("token");
-
   return axios.create({
     baseURL: API_PORT,
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
+    withCredentials: true,
   });
 };
+
 interface AxiosMutationParams<T> {
   path: string;
   data: T;
   method?: "post" | "put";
 }
+
 export const AxiosMutation = async <T>({
   path,
   data,

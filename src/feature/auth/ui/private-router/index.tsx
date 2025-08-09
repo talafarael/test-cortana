@@ -5,7 +5,7 @@ import { useUserStore } from "@/entity/user";
 
 export function PrivateRoute({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const { user, loading, getUser } = useUserStore();
+  const { user, loading, error, getUser } = useUserStore();
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ export function PrivateRoute({ children }: { children: React.ReactNode }) {
   }, [user, loading, getUser]);
 
   useEffect(() => {
+    if (error) router.replace("/");
     if (initialized && !loading && !user) {
       router.replace("/");
     }
