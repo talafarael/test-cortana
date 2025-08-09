@@ -13,7 +13,7 @@ export const Header = () => {
   const { language } = useLanguageStore()
   useEffect(() => {
     getUser()
-  }, [])
+  }, [getUser])
   const handlerLogout = async () => {
     await logoutApi()
     removeUser()
